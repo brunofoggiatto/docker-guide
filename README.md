@@ -112,6 +112,9 @@ docker run -d -e NODE_ENV=production --name app node:18
 
 # Run with volume mount
 docker run -d -v /host/data:/container/data --name app nginx
+
+# To exit container 
+exit
 ```
 
 ### Managing Containers
@@ -285,6 +288,7 @@ LABEL version="1.0.0"
 EXPOSE 80
 VOLUME /var/www/html/
 ```
+**NOTE**: List images ```docker image ls``` to verify the image you created works.
 
 Inside the folder you created Dockerfile, build your image 
 ### Build Commands
@@ -298,9 +302,6 @@ docker build -f custom.dockerfile -t myapp:1.0 .
 # Build without cache
 docker build --no-cache -t myapp:1.0 .
 ```
-**NOTE**: List images ```docker image ls``` to verify the image you created works.
-If it works, you can run a container now ```docker container run -ti myapp:1.0```.
-Verify if apache is working on your container ```dpkg -l | grep apache"``` (If you used Example 02).
 
 ---
 
