@@ -2,6 +2,7 @@
 
 Simple guide for beginners and quick lookup for developers.
 
+
 ## Table of Contents
 
 1. [What is Docker](#what-is-docker)
@@ -76,7 +77,7 @@ docker inspect nginx:latest
 # View image layers
 docker history nginx:latest
 ```
-NOTE: Pay attention when downloading any image from Docker Hub, as many of them may contain vulnerabilities. We will learn how to create our own images.
+**NOTE**: Pay attention when downloading any image from Docker Hub, as many of them may contain vulnerabilities. We will learn how to create our own images.
 
 ---
 
@@ -297,9 +298,9 @@ docker build -f custom.dockerfile -t myapp:1.0 .
 # Build without cache
 docker build --no-cache -t myapp:1.0 .
 ```
-NOTE: List images ```docker image ls``` to verify the image you created works
-If it works, you can run a container now ```docker container run -ti myapp:1.0```
-And verify if apache is working on your container ```dpkg -l | grep apache"```
+**NOTE**: List images ```docker image ls``` to verify the image you created works.
+If it works, you can run a container now ```docker container run -ti myapp:1.0```.
+Verify if apache is working on your container ```dpkg -l | grep apache"``` (If you used Example 02).
 
 ---
 
