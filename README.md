@@ -433,4 +433,6 @@ docker rm $(docker ps -aq)
 - **Use multi-stage builds** to reduce final image size
 - **Clean up regularly** to save disk space
 
+---
+
 **Author:** Bruno H. Foggiatto
