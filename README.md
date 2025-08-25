@@ -314,6 +314,7 @@ docker build --no-cache -t myapp:1.0 .
 ## Docker Compose
 
 Manage multi-container applications with YAML files.
+Basically, Docker Compose helps you integrate an application that uses multiple resources, for example, a website that uses MySQL, HTML, and C++.
 
 ### Basic docker-compose.yml
 ```yaml
