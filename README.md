@@ -286,11 +286,17 @@ LABEL version="1.0.0"
 
 # Expose HTTP port
 EXPOSE 80
+# Volume for website files
 VOLUME /var/www/html/
+
+# Start Apache in the foreground
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
+
 ```
 **NOTE**: List images ```docker image ls``` to verify the image you created works.
 
-Inside the folder you created Dockerfile, build your image 
+Inside the folder you created Dockerfile, build your image:
 ### Build Commands
 ```bash
 # Build image
